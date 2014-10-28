@@ -33,7 +33,8 @@ def printtranscript(transcript):
     for semesters in transcript:
         print(semesters)
         for classes in transcript[semesters]:
-            print(' ',' '.join(str(n) for n in classes))
+            print(' ' +classes[0]+' '+ str(classes[1])+' '+str(classes[2])+' '+classes[3])
+
 
 
 
@@ -42,14 +43,13 @@ printtranscript(transcript)
 #3. Write a procedure semesters(subject) which returns a list of the semesters in which you took a course in the subject
 #area subject. So if called subject('MATH') then you would get back a list of the semesters in which you took a math class.
 
-#def semesters(subject):
-#    for subject in transcript:
-        #print(subject)
-#        print(transcript[ ])
+def semesters(subject,transcript):
+    for semester in transcript:
+         for course in transcript[semester]:
+             if course[0] == subject:
+                    print(semester)
+                    break
 
-#semesters('MATH')
 
-#m=dict(---)
-#for i in m:
-#    print(i)
-#    print(m[i])
+semesters('PSYC',transcript)
+
